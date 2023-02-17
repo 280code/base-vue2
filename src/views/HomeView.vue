@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <el-button @click="goDemo">goDemo</el-button>
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -13,6 +14,12 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld
+  },
+  methods: {
+    goDemo() {
+      console.log('demo');
+      this.$router.push('/demo?id=3&&username=zhang')
+    }
   }
 }
 </script>
